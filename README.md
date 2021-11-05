@@ -1,16 +1,22 @@
-# Foundtations of Data Science with Capstone at SMU, Summer 2021
+# Foundtations of Data Science using R for High Schoolers, Winter 2021
 
 ## Course Description
 
-Data science is the interdisciplinary study of the tools and theory behind using data to extract knowledge. It combines ideas from statistics, computer science, and particular domains in the physical and social sciences in order to make predictions and optimal decisions.
+Data science is the interdisciplinary study of the tools and methods that are developed and used to extract meaningful insights from data. It combines multiple fields including mathematics, statistics, computer science, and particular domains of the physical and social sciences. As more and more data are rapidly produced (e.g., big data), the importance of data science has been increased remarkably in almost all businesses and academic fields. In our digital era, it is very important to understand how data is processed, how information is displayed, and what kind of insights can be extracted in order to make data-oriented predictions and decisions.
 
-This summer intensive course is designed with a practical approach. The students will be guided to learn the basics and move on to more advanced topics in 2 weeks. The final 1 week will be dedicated to practicing and presenting data science skills and competency through capstone projects. 
+This intensive course is designed with a practical approach for high school students with a little or no programing background to teach data manipulation and visualization using R programming language. R is a high-level statistical programming language and computational environment that is widely used in industry and academia these days. The students will be guided to learn the basics and move on to more advanced topics in a month. The final 1 week will be dedicated to practicing and presenting data science skills and competency through capstone projects. 
 
-## Session 1: Building Foundations (2 weeks)
-During the first 2 weeks, you will learn the foundations of data science including the basics of how to structure, visualize, transform, and model data. The primary programming language that we will be using is R, which is both simple to use and was designed around using data. The development environment we will be using is RStudio. Both R and RStudio are open source, and so may be downloaded to your personal laptop for free.
+Course Goal: After taking this course, students will be able to utilize the tools and methods to tackle a wide variety of data science challenges using R.
 
-## Session 2: Practicing Knowledge (1 week)  
-The Data Science Capstone is a team-based, project-based session, providing an opportunity to apply data science skills and knowledge obtained from the first 2 weeks of the foundation session. Teams of two or three students, under the direction of the course instructor and teaching assistants, will be working on a data project. The primary objective is to educate the students in solving real world data science problems in professional settings by leveraging their own computational, statistical, and domain skills. The capstone will end with a final presentation.
+Part 1: Building Foundations (4 weekends)
+During the session 1, students will learn the foundations of data science including how to clean, structure, transform, and visualize data to discover and convey information and insights. The primary programming language that we will be using is R, which is both simple to use and was designed to manipulate and analyze data. We will use RStudio. Both R and RStudio are open source, and so may be downloaded to your personal laptop for free.
+
+Textbook for Part 1: We will be using R for Data Science by Hadley Wickham and Garrett Grolemund. This book is open source and can be found online at https://r4ds.had.co.nz/. A Korean version of text is also available online at https://sulgik.github.io/r4ds/. 
+
+Part 2: Practicing Knowledge (1 week)
+The Data Science Capstone is a team-based, project-based session, providing an opportunity to apply data science skills and knowledge obtained from the foundation session. Teams of two or three students, under the direction of the course instructor and teaching assistants, will be working on a data project. The primary objective is to educate the students in solving real world data science problems in professional settings by leveraging their own computational, statistical, and domain skills. The capstone will end with a final presentation.
+![image](https://user-images.githubusercontent.com/4985154/140467250-c89ab91c-23ec-4489-a78e-69d58f1c2910.png)
+
 
 ## Student Expectation and Project Outcomes of Capstone
 
