@@ -15,17 +15,7 @@ Textbook for Part 1: We will be using R for Data Science by Hadley Wickham and G
 
 Part 2: Practicing Knowledge (1 week)
 The Data Science Capstone is a team-based, project-based session, providing an opportunity to apply data science skills and knowledge obtained from the foundation session. Teams of two or three students, under the direction of the course instructor and teaching assistants, will be working on a data project. The primary objective is to educate the students in solving real world data science problems in professional settings by leveraging their own computational, statistical, and domain skills. The capstone will end with a final presentation.
-![image](https://user-images.githubusercontent.com/4985154/140467250-c89ab91c-23ec-4489-a78e-69d58f1c2910.png)
 
-
-## Student Expectation and Project Outcomes of Capstone
-
-Students will work independently as well as collaboratively in the group for at least 5 hours a day on modeling, analysis, data manipulation/wrangling, visualization, etc. as needed for the project. At the same time, students will be guided to learn soft skills such as project management, presentation, and communication through the daily sync. Students will be expected to read necessary background articles/books, learn additional tools, and log their own work and time.
-
-Each team will provide the following outcomes in a timely manner:
-•	A project proposal detailing the intended goals, methodology, and deliverables
-•	A final presentation on the project outcomes
-•	A GitHub page containing all outcomes (README, data, codes, analyses results, etc.)
 
 ## Textbook
 
