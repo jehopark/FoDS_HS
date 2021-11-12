@@ -1,4 +1,4 @@
-# Foundtations of Data Science using R for High Schoolers, Winter 2021
+# Foundtations of Data Science using R for High School, Winter 2021
 
 ## Course Description
 
