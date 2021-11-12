@@ -1,5 +1,5 @@
-[Foundations of Data Science for High School Students, Winter 2021]
-Foundations of Data Science for High School Students
+[Foundations of Data Science for High School, Winter 2021]
+Foundations of Data Science for High School
 ========================================================
 author: Dr. Jeho Park
 date: November 11, 2021
@@ -38,7 +38,7 @@ __Students will understand data science and appreciate the importance of data an
 
 Course Schedule
 ========================================================
-See the course syllabus
+See the [Course Syllabus](https://docs.google.com/document/d/1Xj1K14juLeDEwbTkoOD5zFzq9M-eoaZ8/edit?usp=sharing&ouid=103067041144506061546&rtpof=true&sd=true)
 
 Expectations
 ========================================================
@@ -60,14 +60,7 @@ Course Technologies
   - https://canvas.instructure.com/enroll/33AL47
 - GitHub (course materials)  
   - https://jehopark.github.io/FoDS_HS/ (course web page)
- 
 
-
-Course Syllabus
-========================================================
-See if you can access this doc at
-
-[Course Syllabus](https://drive.google.com/file/d/1QRZiAJOH_GQMtAW0_3HxbOnXARoSfobQ/view?usp=sharing)
 
 Text Book
 ========================================================
@@ -92,31 +85,22 @@ __Today's Goals__
 (1) Make sure everyone set the RStudio environment   
 (2) Get familiar with RStudio environment  
 (3) Create a first R markdown file  
-(4) Solve exercise problems and add solutions to a markdown (Lab session)  
+(4) Solve exercise problems and add solutions to a markdown (Practice session)  
 
 What is Data Science?  
 =============
 
 Data science consists of the methods and tools for collecting, manipulating, and studying data with a goal of making informed decisions.
+<br><div align="center">
+  <img src="images/data-science-vanndiagram.png" width=600>
+</div>
 
-[Breakout Session 1] Open Discussion
-=================
-- Team up!
-
-- Discuss briefly about what the informed decisions might be in your domain/field (5 min)
-
-- Share your team's example(s) in the main room (5 min)
+Image source: https://towardsdatascience.com/introduction-to-statistics-e9d72d818745
 
 Typical Data Science Project Workflow
 ===================
 <br><div align="center">
   <img src="images/data-science.png" width=800>
-</div>
-
-R and RStudio
-=============
-<div align="center">
-  <img src="images/rstudio-interface.png" width=1200>
 </div>
 
 What is R?
@@ -178,25 +162,14 @@ How to Get Help
 * Google
 
 
-[Breakout Session 2] Where to get help?
+[Homework] Where to get help?
 =============
-- Find Korean websites/community that you can ask questions about R programming (5 min)
-- Suggest them in the main room (5 min)
-
-
-[Hands-On] Check Your R Environment 
-========================
-
-- Check R (if you don't have R, install it now)
-
-- Check RStudio (if you don't have RStudio, install it now)
-
-- Share your screen
+- Find Korean websites/community that you can ask questions about R programming.
 
 [Hands-On] First R Project 
 ========================
 
-- Create a new project named "FoDS+SMU"
+- Create a new project named "FoDS_HS"
 
 Documentation: R Markdown 
 ========================
@@ -233,6 +206,152 @@ __R Markdown__
 Let's go over __Section 27.3__ Text Formatting.
 
 - Copy and paste Section 27.3 code snippet into your Rmd file
+
+Visualization with ggplot2: tidyverse package
+======================
+* Load tidyverse package in your environment
+```{r}
+# if you don't have the package installed yet
+# install.package("tidyverse")
+library(tidyverse)
+```
+>> This should load several packages. See the R message on the console. Notice the "Conflicts" -- what does this mean?
+
+Visualization with ggplot2: a quick look
+======================
+```{r}
+# library(ggplot2)
+ggplot(data = mpg) + 
+  aes(x = displ, y = hwy, color = class) + 
+  geom_point() 
+```
+
+```{r}
+# Compare ggplot() with plot() from base package
+base::plot(mpg$displ, mpg$hwy)
+```
+
+>> Let's look at a grammar of graphics
+
+Session 2
+===========================
+Visualization
+
+
+Visualization with ggplot2: A Grammar of Graphics
+=======================
+
+>> A grammar of graphics is a set of tools for building graphics by adding components and transformations __layer by layer__.  
+
+--
+
+>> Every ggplot2 plot has three key components:
+>> - __Data__,
+>> - A set of __aesthetic mappings__ between variables in the data and visual properties, and
+>> - At least one __layer__ which describes how to render each observation. Layers are usually created with a `geom` function.
+
+```{r}
+library(ggplot2)
+ggplot(data = mpg) + # data
+  aes(x = displ, y = hwy) + # aesthetic mapping
+  geom_point() # layer (geometric object)
+```
+
+
+Visualization with ggplot2: A Grammar of Graphics
+=======================
+Most points on the plot form a nice linear relationship while there are some points that don't seem to follow the relationship. What types of cars are they? 
+
+```{r}
+ggplot(data = mpg) +  
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) # create 
+```
+
+```{r}
+# Color does not always work for everyone. How about different shapes?
+ggplot(data = mpg) +  
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class)) # Any issue with the shape option?
+```
+
+Geometric Objects (geom)
+=======================
+A __geom__ is the geometrical object that a plot uses to represent data. 
+
+For example:  
+- bar charts = bar geoms
+- line charts = line geoms
+- boxplots = boxplot geoms
+- scatter plot = point geoms
+
+>> There are over 40 geoms in ggplot2 package.
+
+Geometric Objects (geom): Where to put aesthetic mapping?
+=======================
+```{r}
+# Using point geom
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+```{r}
+# Using smooth geom
+ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+```
+
+```{r}
+# We can display multiple geoms in one plot
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+```
+
+Geometric Objects (geom): Where to put aesthetic mapping?
+=======================
+```{r}
+# Using multiple geoms
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth() 
+  
+```
+
+```{r}
+ggplot(data = mpg) + 
+  aes(x = displ, y = hwy) + 
+  geom_point() + # Add mapping = aes(color = class) and see the difference
+  geom_smooth() 
+  
+```
+
+Mapping Scope: Global and Local
+==========================
+Global mapping: the mappings of variables done when the `ggplot()` is called
+Local mapping: the mappings of variables done when the geom layer is called
+
+>> Local mapping in a layer overrides the global mapping for that layer.
+
+```{r}
+# library(dplyr) # to use `filter` function below
+
+ggplot(data = mpg) + 
+  aes(x = displ, y = hwy) + 
+  geom_point(mapping = aes(color = class)) + # use the global mapping
+  geom_smooth(data = filter(mpg, class == "subcompact"), se = TRUE) 
+  
+```
+
+Grammar of Graphics
+=====================
+Defines a plot as the combination of
+
+1. __Data__
+2. __Aesthetic Mapping__
+3. __Geometric Object (representation)__
+4. (Statistical Transformation)
+5. (Position Adjustment)
+
+
 
 
 [LAB1] R Markdown Exercise 
