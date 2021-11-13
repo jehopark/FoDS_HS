@@ -60,6 +60,8 @@ Course Technologies
   - https://canvas.instructure.com/enroll/33AL47
 - GitHub (course materials)  
   - https://jehopark.github.io/FoDS_HS/ (course web page)
+- DSA-CS Website (announcement)
+  - https://blog.naver.com/PostList.naver?blogId=dsacs_winter2019&from=postList&categoryNo=47
 
 
 Text Book
@@ -68,7 +70,7 @@ Text Book
 
 - https://r4ds.had.co.nz/ (English Version)
 
-- https://sulgik.github.io/r4ds/ (Korean Version) -- This might be outdated, so check its updates.
+- https://sulgik.github.io/r4ds/ (Korean Version) 
 
 [Reference] 
 
@@ -82,15 +84,15 @@ Introduction to Data Science
 ========================================================
 __Today's Goals__
 
-(1) Make sure everyone set the RStudio environment   
+(1) Make sure everyone sets the RStudio environment   
 (2) Get familiar with RStudio environment  
 (3) Create a first R markdown file  
 (4) Solve exercise problems and add solutions to a markdown (Practice session)  
 
 What is Data Science?  
 =============
+Data science is the interdisciplinary study of the tools and methods that are developed and used to extract meaningful insights from data.
 
-Data science consists of the methods and tools for collecting, manipulating, and studying data with a goal of making informed decisions.
 <br><div align="center">
   <img src="images/data-science-vanndiagram.png" width=600>
 </div>
@@ -100,8 +102,18 @@ Image source: https://towardsdatascience.com/introduction-to-statistics-e9d72d81
 Typical Data Science Project Workflow
 ===================
 <br><div align="center">
-  <img src="images/data-science.png" width=800>
+  <img src="images/data-science.png" width=900>
 </div>
+
+Typical Data Science Tools
+===================
+- Pencil and paper
+- Computer programming software 
+  - Programming: R
+  - Programming: Python
+  - Database: SQL
+  - Statistical applications: SPSS, STATA, SAS, MATLAB, etc.
+
 
 What is R?
 ========================================================
@@ -171,9 +183,34 @@ How to Get Help
 
 - Create a new project named "FoDS_HS"
 
+- Login to RStudio Cloud and follow my instructions
+
+
+
+R's Arithmetic Operators
+========================
+That's right! R is a programming languge.
+```{r, eval=FALSE}
+a <- 16 # assignment operator! Is it an arrow sign?
+b <- 3
+add <- a + b
+sub <- a - b
+mult <- a * b
+div <- a / b
+int_div <- a %/% b
+exponent <- a ^ b
+modulus <- a %% b
+```
+
+```{r}
+# a comment is preceded by a hash sign
+```
+
 Documentation: R Markdown 
 ========================
 __R Markdown is our main documentation tool__
+
+"R Markdown provides **an unified authoring framework** for data science, combining your code, its results, and your prose commentary. R Markdown documents are fully reproducible and support dozens of output formats, like PDFs, Word files, slideshows, and more."
 
 - Basic Formatting
   - Global options
@@ -183,29 +220,35 @@ __R Markdown is our main documentation tool__
 - R Markdown cheat sheet and quick reference
   - https://rmarkdown.rstudio.com/lesson-15.HTML
 
-R Markdown Basic Formatting
-======================
 
-Open "Basic_formatting.Rmd"
+[Hands-On] Now it's your turn
+========================================================
 
+Let's create a R Notebook and start the hands-on exercise in the Notebook document.
 
-[Hands-On] First R Markdown 
-========================
-__R Markdown__  
+* Click on _File > New File > R Notebook_
+* Save it as _FoDS_HS_
+* And follow my instructions
 
-1. Create a new R Markdown (Rmd) file named "My First Rmd"
-1. Check if you have knitr package (if not, install it)
-1. Check R Markdown Cheatsheet
-1. Check this website
-https://ntaback.github.io/UofT_STA130/Rmarkdownforclassreports.html#what_is_markdown
+Exercise 1:
 
-[Hands-On] First R Markdown (cont.)
+Create a variable x containing pi times pi, and another variable y containing a square root of x. Show the values as an output.
+
+두개의 새로운 변수 x 와 y 를 만들어보자.   
+x는 pi 곱하기 pi의 값을 y는 x의 제곱근 값을 가지도록 값을 저장하고 두 변수의 값을 output으로 보여보자.
+
+[Hands-On] R Markdown Text Formatting
 ========================
 __R Markdown__ 
 
 Let's go over __Section 27.3__ Text Formatting.
 
 - Copy and paste Section 27.3 code snippet into your Rmd file
+
+Session 2
+===========================
+# Visualization
+
 
 Visualization with ggplot2: tidyverse package
 ======================
@@ -216,6 +259,18 @@ Visualization with ggplot2: tidyverse package
 library(tidyverse)
 ```
 >> This should load several packages. See the R message on the console. Notice the "Conflicts" -- what does this mean?
+
+mpg dataset
+==================
+```{r}
+?mpg
+```
+
+<div align="center">
+  <img src="images/mpg.png" width=800>
+</div>
+
+
 
 Visualization with ggplot2: a quick look
 ======================
@@ -232,10 +287,6 @@ base::plot(mpg$displ, mpg$hwy)
 ```
 
 >> Let's look at a grammar of graphics
-
-Session 2
-===========================
-Visualization
 
 
 Visualization with ggplot2: A Grammar of Graphics
@@ -256,6 +307,10 @@ ggplot(data = mpg) + # data
   aes(x = displ, y = hwy) + # aesthetic mapping
   geom_point() # layer (geometric object)
 ```
+
+Visualization with ggplot2: Aesthetic Mapping
+=======================
+Maps data into graphic components: x, y, color, shape, etc.
 
 
 Visualization with ggplot2: A Grammar of Graphics
@@ -326,8 +381,9 @@ ggplot(data = mpg) +
 
 Mapping Scope: Global and Local
 ==========================
-Global mapping: the mappings of variables done when the `ggplot()` is called
-Local mapping: the mappings of variables done when the geom layer is called
+Global mapping: the mappings of variables are done when the `ggplot()` is called  
+
+Local mapping: the mappings of variables are done when the geom layer is called
 
 >> Local mapping in a layer overrides the global mapping for that layer.
 
@@ -346,28 +402,98 @@ Grammar of Graphics
 Defines a plot as the combination of
 
 1. __Data__
-2. __Aesthetic Mapping__
+2. __Aesthetic Mapping__ (대응)
 3. __Geometric Object (representation)__
 4. (Statistical Transformation)
-5. (Position Adjustment)
+5. Position Adjustment
+
+Position Adjustments (demo)
+================
+To add clarification or to show additional information on one plot, we can use position adjustment methods in ggplot2.
+
+(1) To avoid overlapping of points:
+
+```{r}
+ggplot(data = mpg) + 
+  aes(x = displ, y = hwy) + 
+#  geom_point()
+  geom_point(position = "jitter")
+```
+
+Position Adjustments (demo) 2
+================
+(2) To show additional information through visual representation
+
+- Barcharts
+  - Simple barcharts
+  - Colored barcharts
+  - Stacked barcharts
+  - Side-by-side barcharts
+
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = cut))
+```
+
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity))
+```
+
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), position = "fill")
+```
+
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), position = "dodge")
+```
 
 
+[LAB1] Day 1 Practice
+==================
+- 3.2.4: #4
+- 3.3.1: #3, #4, #5, #6
+- 3.6.1: #5
 
-
-[LAB1] R Markdown Exercise 
+Further Study
 =================
-As a team of 2, do all the exercise problems in the sections 27.3:
-- 27.3.1 Exercises
+## Variable Types
 
 
-(1) First create a new markdown and name it "FoDS+SMU LAB1"
+Variable Types
+===================
+![Variable Types](./images/variable-types.png)
 
-(2) Include the exercise problems and your answers (in Korean if you prefer)
+Source: https://statsandr.com/blog/variable-types-and-examples/
 
-(3) By the end of today, drop your exercise file (.Rmd) in the course Google Drive folder (GDrive's FoDS+SMU > Day1 > Lab1).
+What is a discrete variable?
+===================
 
-*At the end of your markdown, add one more section named "Questions" and include any questions that were not answered during the Lab session. I will try to review those questions and answer them tomorrow.*
+>> Quantitative *discrete* variables are numeric variables for which the values it can take are __countable__ and have a __finite number of possibilities__. The values are usually, but not always, integers. For example:
 
+>> - Number of children per family
+>> - Number of students in a class
+>> - Number of citizens of a country
+
+Then, what is a continuous variable?
+===================
+>> Quantitative *continuous* variables are numerical measurements whose values are __not countable__ and have an __infinite number of possibilities__. For example:
+
+>> - Age
+>> - Weight
+>> - Height
+
+Q: Classify the following variables as continuous or discrete:
+===============================================
+(1) Temperature in Seoul  
+
+(2) The number of sales made in a week  
+
+(3) Time taken to run a 100-meter dash   
+
+(4) The quantity of fat in samgyupsal  
 
 
 
