@@ -5,6 +5,12 @@ date:
 output: html_notebook
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(nycflights13)
+```
+
 ## 5.2.4 Exercise
 
 #### 1: Find all flights that
