@@ -18,8 +18,7 @@ Instructor RStudio --- push --> [GitHub Repo] --- pull --> Student RStudio
 
 Today's Topics
 ==============
-- Basic R Information
-- Basic R Objects
+- R data objects: vector, data frame, factor, function
 - Working with Data:  
   - Built-in Data,  
   - Data Import, 
@@ -74,11 +73,11 @@ __A data frame is a basic data object for this course!__
 ```r
 n <- c(2, 3, 5) # a vector 
 s <- c("aa", "bb", "cc") # a vector
-b <- c(TRUE, FALSE, TRUE) # a vector
+b <- c(TRUE, FALSE, TRUE) # a vector 
 df <- data.frame(n, s, b) # a data frame
 df
 mtcars # a built-in (attached) data frame
-mtcars$mpg # notice this new $ operator
+mtcars$mpg # notice this $ operator
 ```
 
 Basic R Objects: Data frames (cont.)
@@ -87,11 +86,12 @@ __Data frames are used for storing data tables__
 __It is a column-wide collection of vectors of equal length__. 
 
 ```r
-df1 <- data.frame(y1=rnorm(100),y2=rnorm(100), y3=rnorm(100))
+df1 <- data.frame(y1=rnorm(1000),y2=rnorm(1000), y3=rnorm(1000))
 head(df1) # display first few lines of data
 names(df1) # display column names
 summary(df1) # output depends on the data types
 plot(df1)
+hist(df1$y1)
 ```
 
 
@@ -133,17 +133,17 @@ Find all that can be a variable (or object) name in R from the following:
 
 
 ```r
-4wheelDrive   
+(1) 4wheelDrive   
 
-four_wheel_drive  
+(2) four_wheel_drive  
 
-fourWheelDrive  
+(3) fourWheelDrive  
 
-!my4wheeldrive  
+(4) !my4wheeldrive  
 
-_4wheelDrive  
+(5) _4wheelDrive  
 
-Four.Wheel.Drive  
+(6) Four.Wheel.Drive  
 ```
 
 What is Data Wrangling?
@@ -192,7 +192,7 @@ Follow the instructor and import "auto.csv" file!
 
 Click-click-click-done!
 
-Data Transformation and 
+Session II
 ==============
 ## Data Transformation: 
 - Pick observations by their values (filter()).
@@ -210,7 +210,7 @@ Data Transformation and
 
 Data Transformation
 ====================
-Let's use nycflights dataset for our examples and hands-on practice.
+Let's use `nycflights13` dataset for our examples and hands-on practice.
 
 If you don't have the `nycflights13` package, install it.
 
@@ -220,7 +220,7 @@ library(nycflights13)
 library(tidyverse)
 ```
 
-Try `?flights` to find out the details of the dataset.
+We will be using `flights` data frame for our study. Try `?flights` to find out the details of the data set.
 
 In the next sections, we will learn data manipulation functions from `dplyr` package.
 
@@ -357,11 +357,11 @@ In real world datasets, a data frame may have hundreds or thousands of columns. 
 >> Try `??'Selection language'` from your console to open a help doc about selection helper functions.
 
 
-[Hands-On] Breakout Session
+[Hands-On] Let's do some exercise!
 ===============
 1. Select `dep_time`, `sched_dep_time`, `dep_delay`, `arr_time`, `sched_arr_time`, and `arr_delay` from flights and save the subset as `flights_time`. (Brainstorm how you can do this.)
 
-2. Arrange `flights_time` by `dep_delay` in descending order and then by `arr_delay` in descending order. Save this sorted data frame back to `flights_time`
+2. Arrange `flights_time` by `dep_delay` in descending order (i.e., arrange them from largest to smallest) and then by `arr_delay` in descending order. Save this sorted data frame back to `flights_time` 
 
 3. Make an one-liner code for the two steps (#1 and #2 above). Use nested function calls. 
 
@@ -512,9 +512,8 @@ First, import "Births2015.csv" from GitHub as a data.frame `births2015` to answe
 
 1. What are the variables of `births2015` data.frame?
 2. What is the total number of babies born in 2015?
-3. Make a histogram of number of births.  
-4. How many babies were born on Wednesdays? (must use the pipe operator)
-5. Which `date` had the least amount of babies born?
+3. How many babies were born on Wednesdays? (must use the pipe operator)
+4. Which `date` had the least amount of babies born?
 
 The Births2015 CSV file is at https://raw.githubusercontent.com/jehopark/data_wrangling_with_r_beginners/master/Births2015.csv
 
