@@ -20,12 +20,13 @@ Today's Topics
 ==============
 - R data objects: vector, data frame, factor, function
 - Working with Data:  
-  - Built-in Data,  
-  - Data Import, 
-  - Data Exploration
-- R Notebook
-- Data Transformation with `dplyr`: filter
+  - Built-in Data  
+  - Data Import
+- Data Wrangling
+  - Data Transformation with `dplyr`: filter, arrange, select, mutate, group_by, summarise 
 - R's Logical Operators
+- Piping operator %>% 
+- Missing values
 
 Basic R Objects: Vectors
 ========================================================
@@ -462,16 +463,6 @@ __Especially, when you use aggregation functions (mean, sum, n, etc.) and if the
 x <- c(1, 2, 3, NA, 5)
 sum(x)
 ```
-
-[Hands-On] Find the most delayed plane on average for arrivals
-================
-1. Remove rows having NA in `dep_delay` and `arr_delay` (The results will be a data frame with no canceled flights.) 
-
-2. Save the filtered data frame as `not_canceled` 
-
-3. Summarise the `not_canceld` data frame by average arrival delay (`arr_delay`), grouped by plane (`tailnum`)
-
-4. Find the plane (identified by it tail number) that have the highest average arrival delay and report how long it delayed its arrivals on average.
 
 Useful summary functions
 ==================
