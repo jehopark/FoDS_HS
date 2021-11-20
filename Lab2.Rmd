@@ -17,7 +17,6 @@ library(nycflights13)
 
 (1) Had an arrival delay of two or more hours
 (2) Flew to Houston (IAH or HOU)
-(3) Were operated by United, American, or Delta
 (4) Departed in summer (July, August, and September)
 (5) Arrived more than two hours late, but didn’t leave late
 (6) Were delayed by at least an hour, but made up over 30 minutes in flight
