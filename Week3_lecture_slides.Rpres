@@ -43,7 +43,7 @@ Explore Variation of Data (데이터 변화/변동 분석)
 
 Distributions of Data (데이터의 분포를 통한 분석)
 ===============
-- Distribution of Discrete Variable
+- Distribution of Categorical Variable
 
 ![Bar plot](images/bar-plot.png)
 
@@ -58,15 +58,15 @@ Distributions of Data (데이터의 분포를 통한 분석)
 - Distribution of Discrete Variable
 ```{r}
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut))
-#  geom_histogram(aes(x = cut)) # would this work?
+#  geom_bar(mapping = aes(x = cut))
+  geom_histogram(aes(x = cut), stat = "count") # would this work?
 ```
 >> A barplot with one variable counts the number of observations in each group and displays the count as the height of a bar for each group
 
 - Distribution of Continuous Variable
 ```{r}
 ggplot(data = diamonds) +
-  geom_histogram(mapping = aes(x = carat), binwidth = 0.5) # Try different bins or binwidth to see different patterns
+  geom_histogram(mapping = aes(x = carat), binwidth = 0.02) # Try different bins or binwidth to see different patterns
 ```
 
 >> A histogram divides the x-axis into equally spaced bins and then uses the height of a bar to display the number of observations that fall in each bin.
@@ -81,7 +81,13 @@ In this hands-on exercise, do the following:
 (2) Plot a histogram whose bin width is 0.1 (using ggplot and geom_histogram)
 
 ```{r}
-# fill-in
+small_dia <-
+  diamonds %>% 
+    filter(carat < 3) 
+
+p <- ggplot(data = small_dia) +
+  geom_histogram(mapping = aes(x = carat), binwidth = 0.1) 
+p
 ```
 
 (Q) How many diamonds are in the tallest bar?  
@@ -148,7 +154,7 @@ From the previous example, we found that there are a small number of diamonds wh
 ```{r}
 # replace proper arguments with <FILL-IN>
 diamonds %>% 
-  filter(y < 2 | y > 30) %>% # filter diamonds by y values less than 3 or greater than 30 
+  filter(y < 2 | y > 30) %>% # filter diamonds by y values less than 2 or greater than 30 
 #  select(price, carat, x, y, z) %>% 
   arrange(y)
 ```
@@ -188,6 +194,8 @@ diamonds3 <-
   diamonds %>% 
     mutate(y = replace(y, y < 3 | y > 30, NA)) %>% 
     arrange(y)
+
+tail(diamonds3)
 ```
 
 Covariation of two variables (두 변수의 함께 변화하는 관계) 
@@ -367,12 +375,17 @@ Lab 3
 ==========
 Exercise 7.4.1: #1, #2
 
-Exercise 7.5.3.1: #2 (Hint: divide the `price` variable into 10 groups or bins using `cut_number()` function on `price`)
+Exercise 7.5.3.1: #2 Visualise the distribution of carat, partitioned by price. 
+(Hint: divide the `price` variable into 10 groups or bins using `cut_number()` function on `price`)
 ```{r}
 # How can you change below code to divide `price` into 10 groups?
-ggplot(diamonds, aes(x = price, y = carat)) +
+ggplot(diamonds, aes(x = cut_number(price, 10), y = carat)) +
   geom_boxplot() +
   coord_flip() +
   xlab("Price")
 ```
 
+## Rpubs
+https://rpubs.com/
+
+Create a free account on RPubs site and upload your Lab 3 solution in R Presentation file.
