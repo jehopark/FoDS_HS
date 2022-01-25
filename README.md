@@ -14,7 +14,7 @@ During the Part 1, students will learn the foundations of data science including
 
 Textbook for Part 1: We will be using R for Data Science by Hadley Wickham and Garrett Grolemund. This book is open source and can be found online at https://r4ds.had.co.nz/. A Korean version of text is also available online at https://sulgik.github.io/r4ds/. 
 
-Part 2: Practicing Knowledge (1 week)
+Part 2: Practicing Knowledge (2 weeks)
 The Data Science Capstone is a team-based, project-based session, providing an opportunity to apply data science skills and knowledge obtained from the foundation session. Teams of two students, under the direction of the course instructor and teaching assistants, will be working on a data project. The primary objective is to educate the students in solving real world data science problems by leveraging their own computational, statistical, and domain skills. The capstone will end with a final presentation.
 
 
