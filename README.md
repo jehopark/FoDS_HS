@@ -2,7 +2,8 @@
 
 ## Course Description
 
-Data science is the interdisciplinary study of the tools and methods that are developed and used to extract meaningful insights from data. It combines multiple fields including mathematics, statistics, computer science, and particular domains of the physical and social sciences. As more and more data are rapidly produced (e.g., big data), the importance of data science has been increased remarkably in almost all businesses and academic fields. In our digital era, it is very important to understand how data is processed, how information is displayed, and what kind of insights can be extracted in order to make data-oriented predictions and decisions.
+Data science is the interdisciplinary field of study that involves a wide range of theoretical and technical knowledge used to extract meaningful insights from data. It combines multiple fields including computer science, mathematics, statistics, and particular domains of the physical and social sciences. As more and more data are rapidly produced (e.g., big data), the importance of data science has been increased remarkably in almost all businesses and academic fields. It is now essential to understand how data is collected and processed, how information is displayed, and what kind of insights can be extracted from data to make data-driven decisions.
+
 
 This intensive course is designed with a practical approach for high school students with a little or no programing background to teach data manipulation and visualization using R programming language. R is a high-level statistical programming language and computational environment that is widely used in industry and academia these days. The students will be guided to learn the basics and move on to more advanced topics in a month. The final 2 weeks will be dedicated to practicing and presenting data science skills and competency through a data project. 
 
