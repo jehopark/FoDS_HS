@@ -388,4 +388,4 @@ ggplot(diamonds, aes(x = cut_number(price, 10), y = carat)) +
 ## Rpubs
 https://rpubs.com/
 
-Create a free account on RPubs site and upload your Lab 3 solution in R Presentation file.
+Create a free account on the RPubs site and upload your Lab 3 solution in R Presentation file. ㅊ

@@ -36,8 +36,7 @@ Basic R Objects: Vectors
 Vectors are array objects of the __same type__ data elements.
 
 ```{r, eval=FALSE}
-class(a)
-```{r, eval=FALSE}
+class(a)  
 class(A)
 ```{r, eval=FALSE}
 b <- c(a,A) # concatenation

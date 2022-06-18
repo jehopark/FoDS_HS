@@ -34,10 +34,7 @@ Vectors are array objects of the __same type__ data elements.
 
 
 ```r
-class(a)
-```
-
-```r
+class(a)  
 class(A)
 ```
 

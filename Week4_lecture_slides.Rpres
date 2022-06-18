@@ -9,18 +9,15 @@ autosize: true
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(eval = FALSE)
 library(tidyverse)
-library(png)
-library(grid)
-
 ```
 
 Quick Review
 ==============
 
 Week 1: Data Visualization (ggplot2 패키지)  
-Week 2: Data Wrangling (dplyr 패키지)
-Week 3: Exploratory Data Analysis (탐색적 데이터 분석)
-
+Week 2: Data Wrangling (dplyr 패키지)   
+Week 3: Exploratory Data Analysis (탐색적 데이터 분석)  
+Week 4: Working with Different Data Types (readr 패키지)
 
 Today's Topics
 ==============
@@ -121,7 +118,7 @@ __Use `locale`__
 ```{r}
 parse_number("1,234.56")
 
-parse_number("1.234,56") # Not what we want! How can we solve this issue?
+parse_number("1.234,56", locale = locale(decimal_mark = ",")) # Not what we want! How can we solve this issue?
 ```
 
 Try `?locale` and `default_locale()` from your console. Which arguments are the number related arguments?
@@ -159,8 +156,8 @@ Number System: Binary, Decimal, Octal, and Hexadecimal
 - Digital Units: Bits, Bytes, and Words
 - Human Number System: Binary (base 2 이진수), Octal (base 8 팔진수), Decimal (base 10 십진수), and Hexadecimal (base 16 십육진수)
 
-Q: How many different different numbers one bit can represent?  
-Q: How many different different numbers two bits can represent?  
+Q: How many different numbers one bit can represent?  
+Q: How many different numbers two bits can represent?  
 ....  
 Q: How many different different numbers four bits can represent?  
 Q: How many different different numbers a byte can represent?
@@ -198,7 +195,7 @@ s2
 s3
 ```
 
-The cases for s1 and s3 do not mean that the strings were broken or error. You need to change the encoding to manually match the character code.
+The cases for s1 and s2 do not mean that the strings were broken or error. You need to change the encoding to manually match the character code.
 
 
 ```{r}
@@ -497,7 +494,7 @@ Make table4b tidy using pivot_longer
 ```{r}
 table4b_long <- 
   table4b %>% 
-    pivot_longer(c(`1999`, `2000`), names_to = <<Fill-in>>, values_to = <<Fill-in>>)
+    pivot_longer(c(`1999`, `2000`), names_to = "year", values_to = "population")
 table4b_long
 ```
 
@@ -534,9 +531,18 @@ Exercise 11.3.5: #7 (할수 있는데 까지\^\^)
 
 Data Project and Presentation
 ================
-Data Project 정하기
+(1)   데이터 프로젝트 정하고 데이터 찾기 (Research)
 
+(2)   제안서 작성하기 (Communication)
 
+(3)   데이터 모으기 (Data Collection)
 
+(4)   데이터 정리하기 (Data Wrangling)
+
+(5)   데이터 시각화 (Data Visualization)와 데이터 분석 (Analysis)을 통하여 결과 도출하기  
+
+(6)   결과를 리포트로 만들기 (Documenting) R Markdown Template 사용
+
+(7)   결과를 10분 정도의 프레젠테이션으로 만들고 발표하기 (Communication) RPubs 사용
 
 
