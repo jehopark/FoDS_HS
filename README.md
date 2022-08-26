@@ -26,9 +26,6 @@ The Data Science Capstone is a team-based, project-based session, providing an o
 ### 1단계 : R을 이용한 데이터 과학 기초 강의
 - 목적: 1단계 4주간의 강의를 통해 학생들은 데이터로 부터 통찰력(insights)를 추출하고 그 정보를 다른 사람에게 올바로 전달하기 위해 데이터를 정리, 구조화, 변환 및 시각화하는 방법을 포함하여 간단한 통계 등 데이터 과학의 기초를 배웁니다. 
 - 사용툴: 우리가 사용할 기본 프로그래밍 언어는 사용하기 쉽게 데이터를 조작하고 분석하도록 개발된 통계 프로그래밍 언어인 R입니다. 통합 개발 환경(IDE) 으로는RStudio를 사용할 것입니다. R과 RStudio는 모두 오픈 소스이므로 개인용 컴퓨터에 무료로 설치할 수 있습니다.
-- 교재: 
-    - Hadley Wickham과 Garrett Grolemund의 “R for Data Science”. 이 책은 오픈 소스이며 https://r4ds.had.co.nz/ 에서 온라인으로 엑세스가 가능합니다. 한국어 버전은 https://bookdown.org/sulgi/r4ds/ 에서도 온라인으로 볼 수 있습니다. 둘 다 무료로 사용할 수 있습니다.
-    - 강의슬라이드 및 화일은 강사의 GitHub repository를 통해서 제공됩니다.
 - 시간: 총 16시간
 - 강의 계획:   
 
@@ -40,7 +37,7 @@ The Data Science Capstone is a team-based, project-based session, providing an o
 |     Session   4     01:00   pm – 01:50 pm    	|     ggplot2를   이용한 데이터   시각화     Geometric   Objects    	|     데이터 정리와   구조화      Summarize   and Group_By    	|     타이디 데이터   만들기     Tidy   Data    	|     캡스톤 프로젝트   준비     Expectations   and guidance    	|
 
 
-## 2단계: 데이터 캡스톤 프로젝트
+### 2단계: 데이터 캡스톤 프로젝트
 
 - 목적:  현실적이고 실제적인 데이터 과학 문제를 통해 학생들을 교육하기 위해 데이터 과학 캡스톤은 팀 기반, 프로젝트 기반 실습 세션으로 설계되었습니다. 특히 캡스톤은 1단계의 기초 강의에서 얻은 데이터 과학 기술과 지식을 실제 데이터에 적용할 수 있는 기회를 제공합니다. 강사와 조교의 지도에 따라 2 ~ 4 명의 학생으로 구성된 팀이 자신이 선택한 데이터 프로젝트에서 팀별로 함께 협업하게 됩니다. 각 팀은 강사와 개별적으로 만나 프로젝트를 선택하고 데이터 수집, 조작 및 시각화에 대한 지침을 얻어 분석 결과를 문서화하고 이 문서를 바탕으로 최종 발표를 하는 것으로 모든 프로그램이 끝납니다.
 - 시간: 총 7시간 지도 (예상)
@@ -52,8 +49,12 @@ The Data Science Capstone is a team-based, project-based session, providing an o
     - 리포트: 모든 팀은 R  Markdown을 사용하여 프로젝트 보고서를 작성합니다; 리포트에는 제안서의 내용과 실제 데이터 분석 결과, 시각화 결과와 전체 결론을 보여주도록 작성합니다.
     - 포스터와 프레젠테이션: 모든 팀은 리포트를 바탕으로 포스터를 작성합니다. 그 리포트와 포스터의 내용과 완성도를 평가하여 구두 발표 팀을 선정합니다. 구두 발표로 선정된 팀은 포스터의 내용을 슬라이드로 작성하여 15분 안에 프로젝트의 내용을 팀프레젠테이션 형식으로 발표합니다. 
 
+## 주교재 (무료 온라인 교재)
+- Hadley Wickham과 Garrett Grolemund의 “R for Data Science”. 이 책은 오픈 소스이며 https://r4ds.had.co.nz/ 에서 온라인으로 엑세스가 가능합니다. 
+- 한국어 버전은 https://bookdown.org/sulgi/r4ds/ 에서도 온라인으로 볼 수 있습니다.
+- 강의슬라이드 및 화일은 강사의 GitHub repository를 통해서 제공됩니다.
 
-## Textbook (English Version)
+## Textbook
 
 We will be using R for Data Science by Hadley Wickham and Garrett Grolemund. This book is open source and can be found/downloaded online. Korean version is also available online.
   
