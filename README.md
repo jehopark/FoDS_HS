@@ -49,13 +49,15 @@ We will be using R for Data Science by Hadley Wickham and Garrett Grolemund. Thi
     - Hadley Wickham과 Garrett Grolemund의 “R for Data Science”. 이 책은 오픈 소스이며 https://r4ds.had.co.nz/ 에서 온라인으로 엑세스가 가능합니다. 한국어 버전은 https://bookdown.org/sulgi/r4ds/ 에서도 온라인으로 볼 수 있습니다. 둘 다 무료로 사용할 수 있습니다.
     - 강의슬라이드 및 화일은 강사의 GitHub repository를 통해서 제공됩니다.
 - 시간: 총 16시간
-- 강의 계획: 
+- 강의 계획:   
+
 |     Session/Time     (Korea Time)    	|     8월 27일    	|     9월 10일    	|     9월 24일    	|     10월 8일    	|
 |---	|---	|---	|---	|---	|
 |     Session   1     10:00   am – 10:50 am    	|     소개/환경   설정     RStudio   Environment,     R   Markdown    	|     R 오브젝트     Vector,   Dataframe, and Tibble    	|     탐색적 데이터 분석     Basic Statistics    	|     R 프로그래밍     User   Functions    	|
 |     Session   2     11:00   am – 11:50 am    	|     ggplot2를   이용한 데이터   시각화 Basics of   Graphs    	|     데이터 변환     Data   transformation    	|     탐색적 데이터 분석     Basic Statistics    	|     R프로그래밍     If   statement    	|
 |     Session   3     12:00   pm – 12:50 pm    	|     ggplot2를   이용한 데이터   시각화     Aesthetic   Mapping    	|     데이터 정리와   구조화      Filter,   Arrange with Logical Operators    	|     다른 타입의   데이터 비교     Data   Import and Parsing    	|     리포팅     R   Markdown practice    	|
 |     Session   4     01:00   pm – 01:50 pm    	|     ggplot2를   이용한 데이터   시각화     Geometric   Objects    	|     데이터 정리와   구조화      Summarize   and Group_By    	|     타이디 데이터   만들기     Tidy   Data    	|     캡스톤 프로젝트   준비     Expectations   and guidance    	|
+
 
 ## Notes
 *This course material is also work-in-progress. It will be constantly updated.*
