@@ -2,7 +2,6 @@
 Foundations of Data Science for High School
 ========================================================
 author: Dr. Jeho Park
-date: November 12, 2021
 autosize: true
 
 ```{r setup, include=FALSE}
@@ -16,19 +15,15 @@ __About Me__
 
 Email: dr.jeho.park@gmail.com  
 
-- Studied Electrical Engineering in college and Computer Science + Applied Mathematics (Statistics) in grad school
-- Focused on statistical modeling on parallel processing performance
-- Associate Director of Harvey Mudd College’s Scientific Computing and Research Computing, promoting CS and data analytics to non-CS people
-- Director of Claremont McKenna College's Quantitative and Computing Lab, a comprehensive support center for math, computing and data analytics
-- Director and Visiting Assistant Professor for Data Science Capstone Program
+- 학부는 전기공학, 대학원은 컴퓨터 사이언스 + 통계 | Studied Electrical Engineering in college and Computer Science + Applied Mathematics (Statistics) in grad school
+- 현재 클레어몬트 맥케나 칼리지에서 수리컴퓨팅센터의 디렉터 | Director of Claremont McKenna College's Quantitative and Computing Lab, a comprehensive support center for math, computing and data analytics
+- 데이터 사이언스 겸임교수, 데이터 사이언스 캡스톤 프로그램 디렉터 | Director and Visiting Assistant Professor and Director for Data Science Capstone Program
 
 Introduction: TA
 ========================================================
 __About TA__
 
 Kenneth Park  
-
-Sam Lee
 
 
 Course Goals
@@ -38,21 +33,19 @@ __Students will understand data science and appreciate the importance of data an
 
 Course Schedule
 ========================================================
-See the [Course Syllabus](https://docs.google.com/document/d/1Xj1K14juLeDEwbTkoOD5zFzq9M-eoaZ8/edit?usp=sharing&ouid=103067041144506061546&rtpof=true&sd=true)
+See the [Course Syllabus]()
 
 Expectations
 ========================================================
-1. __Participation is the key__  
+1. __참가하는 수업 | Participation is the key__  
     *Show your attention (open camera, use gestures, chat, voice, etc.).*
     
-1. __Do all the hands-on examples__  
+1. __실습하는 수업 | Do all the hands-on examples__  
     *No exception!*
 
-1. __During the first 2 weeks, you will need to find a data project for your final presentation__  
+1. __데이터 프로젝트 | During the first 2 weeks, you will need to find a data project for your final presentation__  
     *Instructor and TA will help you on this*
 
-1. __Our main communication language is English__  
-    *You can selectively use Korean (as I can understand Korean well)*
 
 Course Technologies
 ===================
@@ -60,8 +53,6 @@ Course Technologies
   - https://canvas.instructure.com/enroll/33AL47
 - GitHub (course materials)  
   - https://jehopark.github.io/FoDS_HS/ (course web page)
-- DSA-CS Website (announcement)
-  - https://blog.naver.com/PostList.naver?blogId=dsacs_winter2019&from=postList&categoryNo=47
 
 
 Text Book
