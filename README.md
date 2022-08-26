@@ -62,7 +62,7 @@ We will be using R for Data Science by Hadley Wickham and Garrett Grolemund. Thi
 
 - https://r4ds.had.co.nz/ (English Version) -- This is work-in-progress-ish text, so it might be updated in the middle of lectures.
 
-- https://sulgik.github.io/r4ds/ (Korean Version) -- This might be outdated, so crosscheck its contents and the English version.
+- https://bookdown.org/sulgi/r4ds/ (Korean Version) -- This might be outdated, so crosscheck its contents and the English version.
   
 - https://jrnold.github.io/r4ds-exercise-solutions/ (Exercise Solutions)
 
