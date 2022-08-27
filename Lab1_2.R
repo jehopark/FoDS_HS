@@ -12,7 +12,7 @@
 not_blue_point_plot <- ggplot(data = mpg) + 
     geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
 
-not_blue_point_plot
+print(not_blue_point_plot)
 
 # Correct the ggplot code above to display blue color for its point geom.
 
