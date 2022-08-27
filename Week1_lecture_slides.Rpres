@@ -474,8 +474,10 @@ __Using the `mpg` data, make a scatterplot of `hwy` vs `cyl`__
 - (Lab1\_2) 3.3.1: #1 (modified)  
 __What’s gone wrong with this code? Why are the points not blue?__
 ```{r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+not_blue_point_plot <- ggplot(data = mpg) + 
+    geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+
+not_blue_point_plot
 ```
 
 __Correct the ggplot code above to display blue color for its point geom.__
