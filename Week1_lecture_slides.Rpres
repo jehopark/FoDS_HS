@@ -174,8 +174,8 @@ How to Get Help
 [Hands-On] First R Project 
 ========================
 
-- Login to RStudio Cloud and follow my instructions
-
+- From RStudio Cloud, click on the project named `FoDS_HS`
+- Click on "Save a Permanent Copy"
 
 
 R's Arithmetic Operators
