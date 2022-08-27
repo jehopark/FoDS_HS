@@ -290,21 +290,16 @@ Visualization with ggplot2: A Grammar of Graphics
 >> - A set of __aesthetic mappings__ between variables in the data and visual properties, and
 >> - At least one __layer__ which describes how to render each observation. Layers are usually created with a `geom` function.
 
-```{r}
-library(ggplot2)
-ggplot(data = mpg) + # data
-  aes(x = displ, y = hwy) + # aesthetic mapping
-  geom_point() # layer (geometric object)
-```
+
 
 Visualization with ggplot2: A Grammar of Graphics (cont.)
 =======================
 >> Every ggplot2 plot has three key components: data, aesthetic mappings, geometric object
+
 ```{r}
 library(ggplot2) # load ggplot2 package
 ggplot(data = mpg) + # data
-  aes(x = displ, y = hwy) + # aesthetic mapping
-  geom_point() # layer (geometric object)
+  geom_point(mapping = aes(x = displ, y = hwy)) # geometric object and aesthetic mapping
 ```
 
 Template
@@ -381,8 +376,15 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ```{r}
 ggplot(data = mpg) + 
   aes(x = displ, y = hwy) + 
-  geom_point() + # Add mapping = aes(color = class) and see the difference
+  geom_point() + # Add mapping = aes(color = class) 
   geom_smooth() 
+  
+```
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth() # got error? why?
   
 ```
 
@@ -395,7 +397,7 @@ Local mapping: the mappings of variables are done when the geom layer is called
 >> Local mapping in a layer overrides the global mapping for that layer.
 
 ```{r}
-# library(dplyr) # to use `filter` function below
+library(dplyr) # to use `filter` function below
 
 ggplot(data = mpg) + 
   aes(x = displ, y = hwy) + 
@@ -463,12 +465,12 @@ ggplot(data = diamonds) +
 __For all exercises below, save the result ggplot2 object in `p`__
 
 
-- 3.2.4: #4 (modified)   
+- (Lab1\_1) 3.2.4: #4 (modified)   
 __Using the `mpg` data, make a scatterplot of `hwy` vs `cyl`__
 
 --
 
-- 3.3.1: #1 (modified)  
+- (Lab1\_2) 3.3.1: #1 (modified)  
 __What’s gone wrong with this code? Why are the points not blue?__
 ```{r}
 ggplot(data = mpg) + 
@@ -479,7 +481,7 @@ __Correct the ggplot code above to display blue color for its point geom.__
 
 --
 
-- 3.6.1: #1 (modified)   
+- (Lab1\_3) 3.6.1: #1 (modified)   
 __What geom would you use to draw a boxplot?__  
 __Draw boxplots showing highway miles per gallon for each different car type.__  
 
