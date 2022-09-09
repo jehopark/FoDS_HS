@@ -23,7 +23,7 @@ flights_with_speed <-
 ## Your work ends before this line
 
 # Ex 5.3.1: #2.2 (modified)
-# Use sort() to sort flights to find the fastest (highest speed) flight's carrier code.
+# Use sort() to sort flights_with_speed to find the fastest (highest speed) flight's carrier code.
 # Save the result to a variable, flights_sort_speed.
 
 
