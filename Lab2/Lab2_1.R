@@ -32,7 +32,7 @@ arr_del_not_late_filter <-
 ## Your work ends before this line
 
 
-# Ex 5.2.4: #1.7 (modified)
+# Ex 5.2.4: #1.6 (modified)
 # Use filter() to find all flights that were delayed by at least an hour, but made up over 30 minutes in flight.
 # Save the result to a variable, arr_del_made_up_30_filter.
 
