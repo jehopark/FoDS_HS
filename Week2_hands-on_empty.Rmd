@@ -1,0 +1,41 @@
+---
+title: "Week 2 Hands-on Exercise"
+author: "이름"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(nycflights13)
+library(tidyverse)
+```
+
+## Hands-On 1: Filter and Logical Operators
+
+1. Find all flights that departed in November or December. 11월 또는 12월에 이륙한 비행기
+```{r}
+nov_dec_flight <- # Fill-in #
+```
+
+1. Find all flights that weren’t delayed (on arrival or departure) by more than two hours (120 min)
+두시간 이상 delay되지 않은 비행기
+
+```{r}
+lessthan2hourdelay1 <-  # Fill-in #
+lessthan2hourdelay2 <-  # Fill-in #
+lessthan2hourdelay1 == lessthan2hourdelay2
+```
+
+## Hands-On 2: Arrange and Find
+1. Sort `flights` to find the most delayed flights. 가장 오래 연착된 노선을 찾으시오. Find the flights that left earliest. 가장 빨리 출발한 노선을 찾으시오.
+
+```{r}
+arrange( # Fill-in # )
+```
+
+
+1. Which flights traveled the farthest? Which traveled the shortest?
+```{r}
+arrange( # Fill-in # )
+```
+
