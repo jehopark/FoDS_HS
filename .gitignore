@@ -2,3 +2,4 @@ old/*
 docs/*
 lecture_slides/*
 .Rproj.user
+.DS_Store
