@@ -389,19 +389,9 @@ ggplot(data = small_dia) +
 
 Lab 3
 ==========
-Exercise 7.4.1: #1, #2
+- Lab3_1.R  
 
-Exercise 7.5.3.1: #2 Visualise the distribution of carat, partitioned by price. 
-(Hint: divide the `price` variable into 10 groups or bins using `cut_number()` function on `price`)
-```{r}
-# How can you change below code to divide `price` into 10 groups?
-ggplot(diamonds, aes(x = cut_number(price, 10), y = carat)) +
-  geom_boxplot() +
-  coord_flip() +
-  xlab("Price")
-```
+- Lab3_2.R  
+  
+- Lab3_3.R
 
-## Rpubs
-https://rpubs.com/
-
-Create a free account on the RPubs site and upload your Lab 3 solution in R Presentation file. ㅊ
