@@ -75,7 +75,7 @@ ggplot(data = diamonds) +
 - Distribution of Continuous Variable (연속 변수의 분포)
 ```{r}
 ggplot(data = diamonds) +
-  geom_histogram(mapping = aes(x = carat), binwidth = 0.02) # Try different bins or binwidth to see different patterns
+  geom_histogram(mapping = aes(x = carat), binwidth = 0.2) # Try different bins or binwidth to see different patterns
 ```
 
 >> A histogram divides the x-axis into equally spaced bins and then uses the height of a bar to display the number of observations that fall in each bin.
