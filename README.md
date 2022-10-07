@@ -1,4 +1,4 @@
-# Foundtations of Data Science for High School
+# Foundations of Data Science for High School
 
 ## Course Description (English Version)
 
