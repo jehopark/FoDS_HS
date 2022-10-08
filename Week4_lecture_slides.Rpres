@@ -30,8 +30,7 @@ Today's Topics
 - Tibbles vs Data Frames
 - Tidy Data
 - Vectorized operations
-- Pivoting data
-- Making tidy data
+- Pivoting data (longer or wider)
 
 Data Import
 ==========
