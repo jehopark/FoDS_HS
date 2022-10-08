@@ -64,7 +64,7 @@ str(parse_integer(c("1", "2", "3")))
 str(parse_date(c("2010-01-01", "1979-10-14")))
 ```
 
-Q: what does`str()` do?
+Q: what does `str()` do?
 
 ```{r}
 x <- parse_integer(c("123", "345", "abc", "123.45"))
@@ -117,7 +117,7 @@ __Use `locale`__
 ```{r}
 parse_number("1,234.56")
 
-parse_number("1.234,56", locale = locale(decimal_mark = ",")) # Not what we want! How can we solve this issue?
+parse_number("1.234,56") # Is it right? How can we solve this issue?
 ```
 
 Try `?locale` and `default_locale()` from your console. Which arguments are the number related arguments?
@@ -221,7 +221,7 @@ Parsing Dates, date-times, and times
 ==============
 
 - `parse_datetime()` expects an ISO8601 date-time. For more information about ISO8601 format, please read https://ko.wikipedia.org/wiki/ISO_8601.
-- `parse_date()` expects a four digit year, a - or /, the month, a - or /, then the day like "2010-10-01"
+- `parse_date()` expects a four digit year, a - or /, the month, a - or /, then the day like "2010-10-01" or "2010/10/01"
 - `parse_time()` expects the hour, :, minutes, optionally : and seconds, and an optional am/pm specifier like "01:10 am"
 
 
@@ -425,9 +425,8 @@ Examples of Easy Tidy Data Manipulations
 
 ```{r}
 table1 %>% 
-  mutate(rate = cases / population * 10000) 
+  mutate(rate = cases / population * 10000)
 ```
-
 
 ```{r}
 # Compute cases per year
@@ -493,7 +492,7 @@ Make table4b tidy using pivot_longer
 ```{r}
 table4b_long <- 
   table4b %>% 
-    pivot_longer(c(`1999`, `2000`), names_to = "year", values_to = "population")
+    pivot_longer( ##FILL_IN## )
 table4b_long
 ```
 
